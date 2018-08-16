@@ -51,7 +51,6 @@ class FizzBuzzTest extends FlatSpec with Matchers {
 
   it should "return the correct combination of fizz, buzz, and deluxe" in {
     FizzBuzz.fizzBuzz(66) should equal ("fizz deluxe")
-    FizzBuzz.fizzBuzz(555) should equal ("fizz buzz deluxe")
   }
 
   it should "return 'fake' deluxe for deluxe numbers that are odd" in {
