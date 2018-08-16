@@ -32,6 +32,8 @@ class FizzBuzzTest extends FlatSpec with Matchers {
       FizzBuzz.fizzBuzz(n) should equal ("fizz")
     }
 
+    forAll
+
     FizzBuzz.fizzBuzz(32) should equal ("fizz")
   }
 }
