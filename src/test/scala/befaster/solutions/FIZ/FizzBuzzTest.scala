@@ -42,7 +42,9 @@ class FizzBuzzTest extends FlatSpec with Matchers {
     }
   }
 
-  it should "return 'fizz deluxe' if the number is divisible by 3 AND contains a 3" in {
-    FizzBuzz.fizzBuzz(33) should equal ("fizz deluxe")
+  it should "return 'fizz fake deluxe' if the number is divisible by 3 AND contains a 3" in {
+    FizzBuzz.fizzBuzz(33) should equal ("fizz fake deluxe")
   }
+
+  it should "return a 'fizz deluxe' if the number is divisible by 5 AND contains a 5 "
 }

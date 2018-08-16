@@ -7,7 +7,8 @@ object FizzBuzz {
       if (number.divisibleBy(5) || number.contains(5)) Some("buzz") else None,
       if (number.isDeluxe)
         if (number.isFakeDeluxe) Some("fake deluxe") else Some("deluxe")
-      else None)
+      else
+        None)
 
     if (result.forall(_.isEmpty))
       number.toString
