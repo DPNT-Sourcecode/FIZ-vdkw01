@@ -8,10 +8,16 @@ class FizzBuzzTest extends FlatSpec with Matchers {
     FizzBuzz.fizzBuzz(3) should equal ("fizz")
     FizzBuzz.fizzBuzz(6) should equal ("fizz")
     FizzBuzz.fizzBuzz(9) should equal ("fizz")
-    FizzBuzz.fizzBuzz(18) should equal ("fizz")
   }
 
   it should "return 'buzz' when the number is a multiple of 5" in {
     FizzBuzz.fizzBuzz(5) should equal ("buzz")
+    FizzBuzz.fizzBuzz(10) should equal ("buzz")
+    FizzBuzz.fizzBuzz(20) should equal ("buzz")
+  }
+
+  it should "return 'fizz buzz' if the number is a multiple of 3 and 5" in {
+    FizzBuzz.fizzBuzz(15) should equal ("fizz buzz")
+    FizzBuzz.fizzBuzz(30) should equal ("fizz buzz")
   }
 }
