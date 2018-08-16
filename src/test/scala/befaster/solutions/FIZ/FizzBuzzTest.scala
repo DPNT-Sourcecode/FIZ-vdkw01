@@ -1,6 +1,7 @@
 package befaster.solutions.FIZ
 
 import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.Inspectors._
 
 class FizzBuzzTest extends FlatSpec with Matchers {
 
@@ -28,9 +29,9 @@ class FizzBuzzTest extends FlatSpec with Matchers {
   }
 
   it should "return 'fizz' if the number contains a 3" in {
-    
-
-
-    FizzBuzz.fizzBuzz(32) should equal ("fizz")
+    forAll((1 to 9999).filter(n => n.toString.contains('3'))) {
+      n =>
+        FizzBuzz.fizzBuzz(n) should include ("fizz")
+    }
   }
 }
