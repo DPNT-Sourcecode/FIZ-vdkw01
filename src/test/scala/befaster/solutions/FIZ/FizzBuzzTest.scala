@@ -20,4 +20,10 @@ class FizzBuzzTest extends FlatSpec with Matchers {
     FizzBuzz.fizzBuzz(15) should equal ("fizz buzz")
     FizzBuzz.fizzBuzz(30) should equal ("fizz buzz")
   }
+
+  it should "return the number if not a multiple of 3 or 5" in {
+    FizzBuzz.fizzBuzz(1) should equal ("1")
+    FizzBuzz.fizzBuzz(2) should equal ("2")
+    FizzBuzz.fizzBuzz(7) should equal ("7")
+  }
 }
