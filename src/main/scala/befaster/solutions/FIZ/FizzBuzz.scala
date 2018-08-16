@@ -2,11 +2,15 @@ package befaster.solutions.FIZ
 
 object FizzBuzz {
   def fizzBuzz(number: Int): String = {
-    Seq[Option[String]](
+    val result = Seq[Option[String]](
       if (number.divisibleBy(3) || number.contains(3)) Some("fizz") else None,
       if (number.divisibleBy(5) || number.contains(5)) Some("buzz") else None,
-      if (number.isDeluxe) Some("deluxe") else None
-    ).filterNot(_.isEmpty).map(_.get).reduce(_ + " " + _)
+      if (number.isDeluxe) Some("deluxe") else None)
+
+    if (result.forall(_.isEmpty))
+      number.toString
+    else
+      result.filterNot(_.isEmpty).map(_.get).reduce(_ + " " + _)
   }
 
   implicit class FizzBuzzNumber(number: Int) {
