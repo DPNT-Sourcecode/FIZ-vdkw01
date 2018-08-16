@@ -34,4 +34,11 @@ class FizzBuzzTest extends FlatSpec with Matchers {
         FizzBuzz.fizzBuzz(n) should include ("fizz")
     }
   }
+
+  it should "return 'buzz' if the number contains a 5" in {
+    forAll((1 to 9999).filter(n => n.toString.contains('5'))) {
+      n =>
+        FizzBuzz.fizzBuzz(n) should include ("buzz")
+    }
+  }
 }

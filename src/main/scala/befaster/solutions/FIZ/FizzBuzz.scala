@@ -2,9 +2,9 @@ package befaster.solutions.FIZ
 
 object FizzBuzz {
   def fizzBuzz(number: Int): String = number match {
-    case n if n.divisibleBy(15) => "fizz buzz"
+    case n if n.divisibleBy(15) || n.contains(3) || n.contains(5) => "fizz buzz"
     case n if n.divisibleBy(3) || n.contains(3) => "fizz"
-    case n if n.divisibleBy(5) => "buzz"
+    case n if n.divisibleBy(5) || n.contains(5) => "buzz"
     case n => n.toString
   }
 
