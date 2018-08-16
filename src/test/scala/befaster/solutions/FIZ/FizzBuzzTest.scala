@@ -6,20 +6,20 @@ import org.scalatest.Inspectors._
 class FizzBuzzTest extends FlatSpec with Matchers {
 
   "The fizz buzz function" should "return 'fizz' when the provided number is a multiple of 3" in {
-    FizzBuzz.fizzBuzz(3) should equal ("fizz")
+    FizzBuzz.fizzBuzz(3) should include ("fizz")
     FizzBuzz.fizzBuzz(6) should equal ("fizz")
     FizzBuzz.fizzBuzz(9) should equal ("fizz")
   }
 
   it should "return 'buzz' when the number is a multiple of 5" in {
-    FizzBuzz.fizzBuzz(5) should equal ("buzz")
+    FizzBuzz.fizzBuzz(5) should include ("buzz")
     FizzBuzz.fizzBuzz(10) should equal ("buzz")
     FizzBuzz.fizzBuzz(20) should equal ("buzz")
   }
 
   it should "return 'fizz buzz' if the number is a multiple of 3 and 5" in {
-    FizzBuzz.fizzBuzz(15) should equal ("fizz buzz")
-    FizzBuzz.fizzBuzz(30) should equal ("fizz buzz")
+    FizzBuzz.fizzBuzz(15) should include ("fizz buzz")
+    FizzBuzz.fizzBuzz(30) should include ("fizz buzz")
   }
 
   it should "return the number if not a multiple of 3 or 5" in {
@@ -46,5 +46,7 @@ class FizzBuzzTest extends FlatSpec with Matchers {
     FizzBuzz.fizzBuzz(33) should equal ("fizz fake deluxe")
   }
 
-  it should "return a 'fizz deluxe' if the number is divisible by 5 AND contains a 5 "
+  it should "return a 'buzz deluxe' if the number is divisible by 5 AND contains a 5 " in {
+    FizzBuzz.fizzBuzz(500) should equal ("buzz deluxe")
+  }
 }
