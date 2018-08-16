@@ -28,8 +28,10 @@ class FizzBuzzTest extends FlatSpec with Matchers {
   }
 
   it should "return 'fizz' if the number contains a 3" in {
-    for (n <- 1 to 9999 if n % 3 != 0) {
-      FizzBuzz.fizzBuzz(n) should contains ("fizz")
+    for (n <- 1 to 9999 if n.toString.contains(3)) {
+      FizzBuzz.fizzBuzz(n) should equal ("fizz")
     }
+
+    FizzBuzz.fizzBuzz(32) should equal ("fizz")
   }
 }
