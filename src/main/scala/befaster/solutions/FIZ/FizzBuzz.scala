@@ -11,4 +11,8 @@ object FizzBuzz {
   private def divisibleBy(number: Int)
 
   private def containsThree(number: Int): Boolean = number.toString.contains('3')
+
+  implicit class FizzBuzzNumber(number: Int) {
+    def divisibleBy(divisor: Int): Boolean = number % divisor == 0
+  }
 }
