@@ -41,4 +41,11 @@ class FizzBuzzTest extends FlatSpec with Matchers {
         FizzBuzz.fizzBuzz(n) should include ("buzz")
     }
   }
+
+  it should "return 'deluxe' if the number is greater than 10 and all digits are identical" in {
+    forAll(List(11, 22, 33, 44, 55)) {
+      n =>
+        FizzBuzz.fizzBuzz(n) should include ("deluxe")
+    }
+  }
 }
