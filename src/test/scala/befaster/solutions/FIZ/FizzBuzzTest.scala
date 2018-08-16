@@ -26,4 +26,11 @@ class FizzBuzzTest extends FlatSpec with Matchers {
     FizzBuzz.fizzBuzz(2) should equal ("2")
     FizzBuzz.fizzBuzz(7) should equal ("7")
   }
+
+  it should "return 'fizz' if the number contains a 3" in {
+    1 to 
+
+    FizzBuzz.fizzBuzz(32) should equal ("fizz")
+    FizzBuzz.fizzBuzz(73) should equal ("fizz")
+  }
 }
