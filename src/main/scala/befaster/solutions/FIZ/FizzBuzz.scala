@@ -18,7 +18,7 @@ object FizzBuzz {
   implicit class FizzBuzzNumber(number: Int) {
     def divisibleBy(divisor: Int): Boolean = number % divisor == 0
     def contains(digit: Int): Boolean = number.toString.contains(digit.toString)
-    def isDeluxe: Boolean = number > 10 && number.toString.distinct.length == 1
+    def isDeluxe: Boolean = divisibleBy(3) && contains(3) || divisibleBy(5) && contains(5)
     def isFakeDeluxe: Boolean = isDeluxe && number % 2 != 0
   }
 }

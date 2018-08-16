@@ -42,22 +42,7 @@ class FizzBuzzTest extends FlatSpec with Matchers {
     }
   }
 
-  it should "return 'deluxe' if the number is greater than 10 and all digits are identical" in {
-    forAll(List(22, 44, 88)) {
-      n =>
-        FizzBuzz.fizzBuzz(n) should equal ("deluxe")
-    }
-  }
-
-  it should "return the correct combination of fizz, buzz, and deluxe" in {
-    FizzBuzz.fizzBuzz(66) should equal ("fizz deluxe")
-  }
-
-  it should "return 'fake' deluxe for deluxe numbers that are odd" in {
-    FizzBuzz.fizzBuzz(11) should equal ("fake deluxe")
-  }
-
-  it should "return the correct combination of fizz, buzz, and fake deluxe" in {
-    FizzBuzz.fizzBuzz(555) should equal ("fizz buzz fake deluxe")
+  it should "return 'fizz deluxe' if the number is divisible by 3 AND contains a 3" in {
+    FizzBuzz.fizzBuzz(33) should equal ("fizz deluxe")
   }
 }
